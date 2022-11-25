@@ -6,6 +6,9 @@
   --subtle-text-color: #8e8f99;
   --accent-color: #e7e9fc;
   --light-color: #f4f4fd;
+  --middle-font: 600;
+  --bold-font: 800;
+  --header-font-size: 20px;
 }
 
 body {
@@ -13,52 +16,150 @@ body {
   margin: 0;
   font-family: 'Roboto', sans-serif;
   color: var(--text-color);
+  line-height: 1.5;
 }
 
 .logo {
   font-family: 'Raleway', sans-serif;
-  font-weight: 800;
+  font-weight: var(--bold-font);
   font-size: 18px;
   line-height: 1.33;
   letter-spacing: 0.03em;
   text-transform: uppercase;
   text-decoration: none;
-  color: var(--dark-color);
-}
-
-.logo-blue {
   color: var(--primary-brand-color);
 }
 
+.logo-header {
+  color: var(--dark-color);
+}
+
 .nav-list,
-.nav-local ul,
+.contacts,
+.benefits,
+.our-work,
+.team-cards,
+.nav-local,
 .portfolio-cards ul {
   list-style-type: none;
+  text-align: center;
 }
 
 .nav-global {
-  font-weight: 600;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
+  font-weight: var(--middle-font);
   color: var(--dark-color);
   text-decoration: none;
 }
 
-.contacts {
+.nav-global:hover {
+  color: var(--text-color);
+}
+
+.nav-global:active {
+  color: var(--primary-brand-color);
+}
+
+.contact {
   color: var(--text-color);
   text-decoration: none;
 }
 
+.contact:hover {
+  color: var(--primary-brand-color);
+}
+
+.order,
+.footer {
+  background-color: var(--dark-color);
+}
+
+.order {
+  text-align: center;
+}
+
+.order h1 {
+  font-weight: var(--middle-font);
+  font-size: 56px;
+  line-height: 1.07;
+  color: white;
+  text-align: center;
+}
+
+.order-button {
+  cursor: pointer;
+  color: white;
+  background-color: var(--primary-brand-color);
+  font-weight: var(--middle-font);
+  line-height: 1.19;
+  letter-spacing: 0.04em;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border-style: none;
+}
+
+.order-button:hover {
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16),
+    0px 2px 1px rgba(46, 47, 66, 0.08);
+}
+
+.order-button:active {
+  background: #404bbf;
+}
+
+.benefit-name {
+  font-weight: var(--middle-font);
+  font-size: var(--header-font-size);
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  color: var(--dark-color);
+}
+
+.presentation h2,
+.our-team h2 {
+  text-transform: capitalize;
+  font-weight: var(--middle-font);
+  font-size: 36px;
+  line-height: 1.11;
+  text-align: center;
+  color: var(--dark-color);
+}
+
+.our-team h3 {
+  font-weight: var(--middle-font);
+  font-size: var(--header-font-size);
+  line-height: 1.2;
+  text-align: center;
+  letter-spacing: 0.02em;
+  color: var(--dark-color);
+}
+
 .buttons {
   cursor: pointer;
-  padding: 8px 16px;
   color: var(--primary-brand-color);
   background-color: var(--light-color);
-  border: 1px solid #e7e9fc;
+  border: 1px solid var(--accent-color);
   border-radius: 4px;
-  font-weight: 600;
-  font-size: 16px;
+  font-weight: var(--middle-font);
   line-height: 1.33;
+}
+
+.buttons:hover {
+  background: var(--primary-brand-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+  color: white;
+}
+
+.portfolio-cards li {
+  border: 0.5px solid #f4f4fd;
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
+  color: white;
+}
+
+.project-name {
+  font-weight: var(--middle-font);
+  font-size: var(--header-font-size);
+  color: var(--dark-color);
 }
 
 .footer {
