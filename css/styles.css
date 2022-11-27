@@ -6,22 +6,21 @@
   --subtle-text-color: #8e8f99;
   --accent-color: #e7e9fc;
   --light-color: #f4f4fd;
-  --middle-font: 600;
-  --bold-font: 800;
-  --header-font-size: 20px;
+  --pure-white: white;
+  --order-active: #404bbf;
 }
 
 body {
-  padding: 0;
-  margin: 0;
   font-family: 'Roboto', sans-serif;
   color: var(--text-color);
-  line-height: 1.5;
+  font-size: 16px;
+  letter-spacing: 0.02em;
+  font-weight: 400;
 }
 
 .logo {
   font-family: 'Raleway', sans-serif;
-  font-weight: var(--bold-font);
+  font-weight: 700;
   font-size: 18px;
   line-height: 1.33;
   letter-spacing: 0.03em;
@@ -46,22 +45,26 @@ body {
 }
 
 .nav-global {
-  font-weight: var(--middle-font);
+  font-weight: 700;
+  font-size: 16px;
   color: var(--dark-color);
   text-decoration: none;
+  letter-spacing: 0.02em;
 }
 
-.nav-global:hover {
-  color: var(--text-color);
-}
-
+.nav-global:hover,
 .nav-global:active {
+  color: var(--primary-brand-color);
+}
+
+.current {
   color: var(--primary-brand-color);
 }
 
 .contact {
   color: var(--text-color);
   text-decoration: none;
+  letter-spacing: 0.02em;
 }
 
 .contact:hover {
@@ -78,18 +81,21 @@ body {
 }
 
 .order h1 {
-  font-weight: var(--middle-font);
+  font-weight: 700;
   font-size: 56px;
   line-height: 1.07;
-  color: white;
+  color: var(--pure-white);
   text-align: center;
+  letter-spacing: 0.02em;
 }
 
 .order-button {
   cursor: pointer;
-  color: white;
+  color: var(--pure-white);
   background-color: var(--primary-brand-color);
-  font-weight: var(--middle-font);
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 16px;
   line-height: 1.19;
   letter-spacing: 0.04em;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
@@ -103,30 +109,55 @@ body {
 }
 
 .order-button:active {
-  background: #404bbf;
+  background: var(--order-active);
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 .benefit-name {
-  font-weight: var(--middle-font);
-  font-size: var(--header-font-size);
+  font-weight: 700;
+  font-size: 20px;
   line-height: 1.2;
   letter-spacing: 0.02em;
   color: var(--dark-color);
 }
 
+.benefit-description {
+  color: var(--text-color);
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+}
+
 .presentation h2,
 .our-team h2 {
   text-transform: capitalize;
-  font-weight: var(--middle-font);
+  font-weight: 700;
   font-size: 36px;
   line-height: 1.11;
   text-align: center;
   color: var(--dark-color);
 }
 
+.our-team {
+  background-color: var(--light-color);
+}
+
 .our-team h3 {
-  font-weight: var(--middle-font);
-  font-size: var(--header-font-size);
+  font-weight: 700;
+  font-size: 20px;
   line-height: 1.2;
   text-align: center;
   letter-spacing: 0.02em;
@@ -139,15 +170,18 @@ body {
   background-color: var(--light-color);
   border: 1px solid var(--accent-color);
   border-radius: 4px;
-  font-weight: var(--middle-font);
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 700;
   line-height: 1.33;
+  letter-spacing: 0.04em;
 }
 
 .buttons:hover {
   background: var(--primary-brand-color);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
-  color: white;
+  color: var(--pure-white);
 }
 
 .portfolio-cards li {
@@ -156,8 +190,8 @@ body {
 }
 
 .project-name {
-  font-weight: var(--middle-font);
-  font-size: var(--header-font-size);
+  font-weight: 700;
+  font-size: 20px;
   color: var(--dark-color);
 }
 
