@@ -15,7 +15,6 @@ body {
   color: var(--text-color);
   font-size: 16px;
   letter-spacing: 0.02em;
-  font-weight: 400;
 }
 
 .logo {
@@ -39,7 +38,7 @@ body {
 .our-work,
 .team-cards,
 .nav-local,
-.portfolio-cards ul {
+.cards {
   list-style-type: none;
   text-align: center;
 }
@@ -135,10 +134,7 @@ body {
 }
 
 .benefit-description {
-  color: var(--text-color);
-  font-size: 16px;
   line-height: 1.5;
-  letter-spacing: 0.02em;
 }
 
 .presentation h2,
@@ -164,6 +160,10 @@ body {
   color: var(--dark-color);
 }
 
+.worker-position {
+  line-height: 1.5;
+}
+
 .buttons {
   cursor: pointer;
   color: var(--primary-brand-color);
@@ -184,7 +184,7 @@ body {
   color: var(--pure-white);
 }
 
-.portfolio-cards li {
+.cards > li {
   border: 0.5px solid #f4f4fd;
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
@@ -193,6 +193,10 @@ body {
   font-weight: 700;
   font-size: 20px;
   color: var(--dark-color);
+}
+
+.project-type {
+  line-height: 1.5;
 }
 
 .footer {
